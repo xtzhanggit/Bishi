@@ -20,10 +20,11 @@ public class Main {
                 i++;
                 continue;
             } else {
-                ints[i + 1] -= ints[i];
-                ints[i + 2] -= ints[i];
+                ints[ints.length - 1] -= ints[i];
+                ints[ints.length - 2] -= ints[i];
                 count += ints[i];
                 ints[i] = 0;
+                Arrays.sort(ints);
                 i++;
             }
         }
